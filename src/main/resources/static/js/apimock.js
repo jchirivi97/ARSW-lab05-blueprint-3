@@ -90,7 +90,7 @@ var apimock = (function () {
 
     return {
         getBlueprintsByAuthor: function(author, callback) {
-            callback(null, mockdata[author]);
+            callback(mockdata[author]);
         },
 
         getBlueprintsByNameAndAuthor: function(name, author, callback) {
