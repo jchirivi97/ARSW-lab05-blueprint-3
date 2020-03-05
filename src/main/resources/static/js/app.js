@@ -1,3 +1,38 @@
+var app= (function(){
+
+
+  return {
+
+    init : function(){
+
+        var canvas = document.getElementById("canv"),
+              context = canvas.getContext("2d");
+        alert("cl");
+        var coordenadas = document.getElementById("coordenadas");
+
+        if(window.PointerEvent){
+            alert("clikckckckckc");
+            canvas.addEventListener("pointerdown", function(event){
+
+                        coordenadas.innerHTML = "x:" + event.pageX + ",y: " + event.pageY;
+
+                    },false);
+        }
+        else{
+            alert("clikckckckckc");
+            canvas.addEventListener("pointerdown", function(event){
+
+                        coordenadas.innerHTML = "x:" + event.clientX + ",y: " + event.clientY;
+
+                    },false);
+        }
+
+    }
+  };
+
+})();
+
+
 var moduleprinc = ( function () {
 
     var funcion = function (planes) {
@@ -30,6 +65,10 @@ var moduleprinc = ( function () {
         }
     }
 }
-
-
 )();
+
+
+
+
+
+
