@@ -12,6 +12,7 @@ var moduleprinc = ( function () {
                 total = total + bp.value;
                 $("table tbody").append(columna);
                 document.getElementById("sumapoints").innerHTML = "Total user points: "+ total;
+                
              });
 
             document.getElementById("nomauthor").innerHTML = nameauthor + "'s blueprints";
